@@ -1,9 +1,9 @@
-NFL Game Prediction Model
+NFL Game Prediction Model:
 
 This project predicts NFL game outcomes using Python, official NFL data, and a machine learning model built with scikit-learn.
 The script automatically retrieves schedules, scores, and team statistics via the nfl_data_py API, which sources data directly from official NFL data feeds, and uses them to forecast weekly results.
 
-Features
+Features:
 
 Automated Data Retrieval: Loads current and historical NFL schedules, scores, and statistics using nfl_data_py (no manual data files required).
 Feature Engineering: Builds features such as:
@@ -16,7 +16,7 @@ Machine Learning Model: Uses HistGradientBoostingClassifier to predict home team
 Output Summary: Lists favorites, underdogs, and confidence tiers (High, Medium, Low) for the upcoming week.
 
 
-Requirements
+Requirements:
 Install the required Python libraries:
 pip install nfl_data_py pandas scikit-learn
 Usage
@@ -31,7 +31,7 @@ The script will print:
 Completed games through the previous week
 Predicted outcomes for the upcoming week, including win probabilities and confidence tiers
 
-Model Overview
+Model Overview:
 Algorithm: HistGradientBoostingClassifier (scikit-learn)
 
 Target Variable: Home team win
@@ -47,12 +47,12 @@ Add a Streamlit or Tableau dashboard for interactive visualization
 Track and compare model accuracy across weeks
 
 
-Data Source
+Data Source:
 All data is retrieved from official NFL data feeds using the open-source nfl_data_py package.
 This ensures that the model is built on verified and regularly updated league data.
 
 
-Tech Stack
+Tech Stack:
 Python
 
 pandas
