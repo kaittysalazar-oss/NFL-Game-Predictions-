@@ -1,62 +1,39 @@
-NFL Game Prediction Model:
+#  NFL Game Predictions in Python
 
-This project predicts NFL game outcomes using Python, official NFL data, and a machine learning model built with scikit-learn.
-The script automatically retrieves schedules, scores, and team statistics via the nfl_data_py API, which sources data directly from official NFL data feeds, and uses them to forecast weekly results.
+This project predicts **NFL game outcomes** using team performance data and machine learning.  
+It demonstrates how to collect, transform, and model real-world sports data using **Python**, **pandas**, **scikit-learn**, and **nfl_data_py**.
 
-Features:
+---
 
-Automated Data Retrieval: Loads current and historical NFL schedules, scores, and statistics using nfl_data_py (no manual data files required).
-Feature Engineering: Builds features such as:
-Season averages (points scored, allowed, win percentage)
-Strength of schedule
-Rolling performance trends (last N games)
-Matchup-based comparisons (offense vs. defense)
+## Project Overview
 
-Machine Learning Model: Uses HistGradientBoostingClassifier to predict home team win probabilities.
-Output Summary: Lists favorites, underdogs, and confidence tiers (High, Medium, Low) for the upcoming week.
+The analysis focuses on:
+- Predicting game winners for a selected **season and week**.  
+- Calculating team-level performance metrics such as average points scored, allowed, win percentage, and point differential.  
+- Using **rolling averages** to capture recent team momentum.  
+- Training a **HistGradientBoostingClassifier** to forecast outcomes based on historical performance.  
+- Providing an adaptable framework for future weeks or seasons.
 
+This project reflects applied **sports analytics and predictive modeling**, showing how data-driven insights can inform game outcome predictions.
 
-Requirements:
-Install the required Python libraries:
+---
+
+## Skills Demonstrated
+
+- **Python Programming** for data preparation and modeling.  
+- **Data Wrangling & Feature Engineering** using `pandas`.  
+- **Predictive Modeling** with `scikit-learn`’s `HistGradientBoostingClassifier`.  
+- **API Integration** using `nfl_data_py` to import live schedule and score data.  
+- **Analytical Thinking** — interpreting model features and performance trends.
+
+---
+
+## Tools & Libraries
+
+- `nfl_data_py` — access to NFL schedules, scores, and stats.  
+- `pandas` — data manipulation and aggregation.  
+- `scikit-learn` — model training and evaluation.  
+
+Install dependencies:
+```bash
 pip install nfl_data_py pandas scikit-learn
-Usage
-
-Clone this repository:
-git clone https://github.com/kaittysalazar/nfl-game-predictions.git
-cd nfl-game-predictions
-Run the script:
-python nfl_predictions.py
-
-The script will print:
-Completed games through the previous week
-Predicted outcomes for the upcoming week, including win probabilities and confidence tiers
-
-Model Overview:
-Algorithm: HistGradientBoostingClassifier (scikit-learn)
-
-Target Variable: Home team win
-
-Feature Inputs: Season-level, rolling, and matchup-based statistics
-
-Training: Model retrains weekly using updated team data
-
-Future Improvements:
-
-Incorporate player-level or injury-based features
-Add a Streamlit or Tableau dashboard for interactive visualization
-Track and compare model accuracy across weeks
-
-
-Data Source:
-All data is retrieved from official NFL data feeds using the open-source nfl_data_py package.
-This ensures that the model is built on verified and regularly updated league data.
-
-
-Tech Stack:
-Python
-
-pandas
-
-scikit-learn
-
-nfl_data_py
